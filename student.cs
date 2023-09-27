@@ -1,14 +1,18 @@
-public class Student
+public class Person
 {
-    //type 'prop' for shortcut
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
+    public string GivenName = "";
+    public string FamilyName = "";
+    public Person()
+    {
 
-    public string INumber { get; set; }
+    }
 
-    // //type 'ctor' shortcut to create Constructor
-    // public Program(Parameters)
-    // {
-
-    // }
+    public void ShowEasternName()
+    {
+        Console.WriteLine($"{FamilyName}, {GivenName}");
+    }
+    public void ShowWesternName()
+    {
+        Console.WriteLine($"{GivenName} {FamilyName}");
+    }
 }
