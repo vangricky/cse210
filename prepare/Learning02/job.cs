@@ -5,7 +5,7 @@ public class Job
 
     public double StartYear;
 
-    public double EndYear ;
+    public double EndYear;
 
     public void DisplayJobDetails()
     {
