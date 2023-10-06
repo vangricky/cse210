@@ -18,6 +18,7 @@ class Program
         prompts.Add("How did I see the hand of the Lord in my life today?");
         prompts.Add("What was the strongest emotion I felt today?");
         prompts.Add("If I had one thing I could do over today, what would it be?");
+        prompts.Add("LUCKY QUESTION: Red or Blue?");
 
         // if user picks option to add a new entry
         // 1. Pick a random prompt from list above.
@@ -72,6 +73,10 @@ class Program
 
     public static void SaveToFile(List<Entry> entries)
     {
+
+        Random random = new Random();
+        int randomNumber = random.Next(1, 101);
+        
         Console.WriteLine("Saving to file...");
 
         string filename = "entries.txt";
@@ -80,7 +85,8 @@ class Program
         {
             foreach (Entry e in entries)
             {
-                outputFile.WriteLine($"Today's Date: {e.EntryDate}. Today's Prompt: {e.Prompt} Your Response: {e.Response}");
+                outputFile.WriteLine($"Today's Date: {e.EntryDate}. \nToday's Prompt: {e.Prompt} \nYour Response: {e.Response}");
+                outputFile.WriteLine($"Fortune Number for the Day: {randomNumber}");
             }
         }
     }
