@@ -26,4 +26,29 @@ public class Fraction {
         return text;
     }
 
+    public double GetDecimalValue()
+    {
+        return (double)Top / (double)Bottom;
+    }
+
+    //getters
+    public int GetTop() 
+    {
+        return Top;
+    }
+
+    public void SetTop(int top)
+    {
+        Top = top;
+    }
+
+    public int GetBottom()
+    {
+        return Bottom;
+    }
+
+    public void SetBottom(int bottom)
+    {
+        Bottom = bottom;
+    }
 }
