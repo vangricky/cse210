@@ -1,4 +1,4 @@
 public class Scripture
 {
-    private 
+    private List<string> Words = new List<string>();
 }
