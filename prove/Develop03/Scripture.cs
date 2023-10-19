@@ -1,9 +1,10 @@
 public class Scripture
 {
-    public List<Word> Words { get; }
+    private List<Word> Words { get; }
     private Reference Reference { get; }
 
     //Constructor
+
     public Scripture(Reference reference, string text)
     {
         Reference = reference;
@@ -44,6 +45,11 @@ public class Scripture
             }
         }
         return true;
+    }
+
+    public List<Word> GetWords()
+    {
+        return Words;
     }
 
 
